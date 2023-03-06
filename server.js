@@ -28,6 +28,7 @@ fs.readFile('./public/index.html', (err, data) => {
         console.error(err);
         return;   
     }
+    const content = data;
     console.log(data);
 });
 
@@ -42,7 +43,7 @@ fs.readFile('./public/index.html', (err, data) => {
 // 3. end with the data that you are reading in from ./public/index.html.
 const server = http.createServer((req, res) => {
     res.writeHead(200, {'Content-Type': 'text/html'});
-    res.end(data);
+    res.end(content);
 
 });
 
