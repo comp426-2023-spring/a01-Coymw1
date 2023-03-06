@@ -23,12 +23,13 @@ const port = args || 3000;
 // If there is an error, put it on the console error and return. 
 // Do not be nice about exiting.
 
-
+var content
 fs.readFile('./public/index.html', (err, data) => {
     if (err) {
         console.error(err);
         return;   
     }
+    content = data;
     console.log(data);
 });
 
