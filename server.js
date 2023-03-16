@@ -23,13 +23,13 @@ const port = args || 3000;
 // If there is an error, put it on the console error and return. 
 // Do not be nice about exiting.
 
-var content
+
 fs.readFile('./public/index.html', (err, data) => {
     if (err) {
         console.error(err);
-        return;   
+        return;
     }
-    content = data;
+    
     console.log(data);
 });
 
@@ -42,7 +42,8 @@ fs.readFile('./public/index.html', (err, data) => {
 // 3. end with the data that you are reading in from ./public/index.html.
 const server = http.createServer((req, res) => {
     res.writeHead(200, {'Content-Type': 'text/html'});
-    res.end(fs.readFile());
+    res.write(fs.readFile());
+    return res.end();
 
 });
 
