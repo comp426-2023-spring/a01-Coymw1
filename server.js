@@ -28,6 +28,7 @@ fs.readFile('./public/index.html', (err, data) => {
     if (err) {
         return console.error(err);
     }
+    return data;
 });
 
 
