@@ -28,7 +28,7 @@ fs.readFile('./public/index.html', (err, data) => {
     if (err) {
         return console.error(err);
     }
-    const data = data;
+    console.log(data);
 });
 
 
