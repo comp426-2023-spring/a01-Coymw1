@@ -41,7 +41,7 @@ fs.readFile('./public/index.html', (err, data) => {
 const server = http.createServer((req, res) => {
     res.writeHead(200, {'Content-Type': 'text/html'});
     var d = fs.readFile();
-    res.end(d);
+    res.end();
 
 });
 
